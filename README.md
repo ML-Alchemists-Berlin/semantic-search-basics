@@ -26,9 +26,6 @@ The project uses the **arXiv dataset** (available on [Kaggle](https://www.kaggle
   - **Lexical Search**: Using exact word matches.
   - **Ground Truth**: Evaluating against known correct results.
 
-## 🚀 How to Get Started
-
-1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/semantic-search-basics.git
 
