@@ -18,6 +18,12 @@ This repository includes Jupyter notebooks demonstrating how to:
 
 The project uses the **arXiv dataset** (available on [Kaggle](https://www.kaggle.com/datasets/Cornell-University/arxiv/data)) to simulate real-world queries. We focus on human-generated queries in the STEM domain to find research papers on specific topics.
 
+### Project Stages
+Stage 1: Setup - Initialize GitHub repository, setup development environment, and establish basic project infrastructure.
+Stage 2: Basic Search Implementation - Develop text preprocessing and a simple keyword-based search system.
+Stage 3: Enhancements and Scalability - Integrate advanced AI for semantic processing and create a basic user interface.
+Stage 4: Specialization and Expansion - Add specialized search features and expand data sources for scalability.
+
 ### Methodology
 
 - **Input Data**: Real queries from users looking for STEM-related papers.
