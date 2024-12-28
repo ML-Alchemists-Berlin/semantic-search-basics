@@ -1,0 +1,68 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches IDEs
+.vscode/
+.idea/
+*.swp
+*~.nib
+local.properties
+
+env/
+venv/
+ENV/
+
+# OS Setup files
+.DS_Store
+Thumbs.db
+
+# Dist. Files
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+bin/
+var/
+sdist/
+develop-eggs/
+.wheelhouse/
+.installed.cfg
+*.egg
+
+# PostgreSQL
+*.conf
+
+# SQLite
+*.sqlite
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+*.ipynb_meta
+
+# Env files
+.env
+.secret
+
+# Reg Files
+*.log
+*.csv
+*.dat
+
+# Other files
+node_modules/
+jspm_packages/
+
+# output files
+*.out
+
+target/
+build/
+
+# Temp files of dockers
+docker-compose*.yml
+*.dockerignore
+*.tar
+*.whl
