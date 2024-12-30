@@ -1,6 +1,8 @@
 import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
+from nltk.stem import SnowballStemmer
+from nltk.stem import WordNetLemmatizer
 
 # NLTK resources
 nltk.download('punkt')
@@ -18,3 +20,16 @@ def process_text(text):
     # Removing stopwords
     text = remove_stopwords(text)
     return text
+
+
+def stem_text(text):
+    stemmer = SnowballStemmer('spanish')
+    tokens = text.split()
+    stemmed_tokens = [stemmer.stem(token) for token in tokens]
+    return ' '.join(stemmed_tokens)
+
+def lemmatize_text(text):
+    lemmatizer = WordNetLemmatizer()
+    tokens = text.split()
+    lemmatized_tokens = [lemmatizer.lemmatize(token, pos='v') for token in tokens]  # 'v' for verbs
+    return ' '.join(lemmatized_tokens)
