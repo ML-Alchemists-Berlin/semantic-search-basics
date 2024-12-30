@@ -3,6 +3,8 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import SnowballStemmer
 from nltk.stem import WordNetLemmatizer
+import string
+from langdetect import detect
 
 # NLTK resources
 nltk.download('punkt')
@@ -33,3 +35,15 @@ def lemmatize_text(text):
     tokens = text.split()
     lemmatized_tokens = [lemmatizer.lemmatize(token, pos='v') for token in tokens]  # 'v' for verbs
     return ' '.join(lemmatized_tokens)
+
+def remove_punctuation(text):
+    translator = str.maketrans('', '', string.punctuation)
+    return text.translate(translator)
+
+def normalize_text(text):
+    text = text.lower()
+    text = ''.join([char for char in text if not char.isdigit()])
+    return text
+
+def detect_language(text):
+    return detect(text)
