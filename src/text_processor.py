@@ -11,7 +11,7 @@ nltk.download('punkt')
 nltk.download('stopwords')
 
 def remove_stopwords(text):
-    stop_words = set(stopwords.words('spanish'))
+    stop_words = set(stopwords.words('english'))
     word_tokens = word_tokenize(text)
     filtered_text = [word for word in word_tokens if word.lower() not in stop_words]
     return " ".join(filtered_text)
@@ -25,7 +25,7 @@ def process_text(text):
 
 
 def stem_text(text):
-    stemmer = SnowballStemmer('spanish')
+    stemmer = SnowballStemmer('english')
     tokens = text.split()
     stemmed_tokens = [stemmer.stem(token) for token in tokens]
     return ' '.join(stemmed_tokens)
