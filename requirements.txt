@@ -1,0 +1,4 @@
+spacy
+requests
+beautifulsoup4
+tqdm
