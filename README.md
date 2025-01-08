@@ -32,6 +32,10 @@ The project uses the **arXiv dataset** (available on [Kaggle](https://www.kaggle
   - **Lexical Search**: Using exact word matches.
   - **Ground Truth**: Evaluating against known correct results.
 
+
+### Bibliography Soruces
+- D. Goldhahn, T. Eckart & U. Quasthoff: Building Large Monolingual Dictionaries at the Leipzig Corpora Collection: From 100 to 200 Languages. In: Proceedings of the 8th International Language Resources and Evaluation (LREC'12), 2012
+
    ```bash
    git clone https://github.com/your-username/semantic-search-basics.git
 
