@@ -37,3 +37,28 @@ def display_comparison(comparison):
         spacy_label = tool_results.get("spaCy", "N/A")
         bert_label = tool_results.get("Hugging Face (BERT)", "N/A")
         print(f"{word:<30}{spacy_label:<30}{bert_label:<30}")
+
+def extract_and_display_organizations(comparison):
+    """
+    Extract and display tokens identified as organizations (ORG) by at least one NER tool.
+
+    Args:
+        comparison (dict): Comparison dictionary with NER results.
+
+    Returns:
+        list: List of tokens identified as organizations.
+    """
+    organizations = []
+    print(f"{'Token':<30}{'spaCy':<30}{'Hugging Face (BERT)':<30}")
+    print("=" * 90)
+    for word, tool_results in comparison.items():
+        # Check if the token is labeled as 'ORG' by any model
+        if "ORG" in tool_results.values():
+            spacy_label = tool_results.get("spaCy", "N/A")
+            bert_label = tool_results.get("Hugging Face (BERT)", "N/A")
+            print(f"{word:<30}{spacy_label:<30}{bert_label:<30}")
+            organizations.append(word)
+
+    print("\nTokens identified as organizations by at least one model:")
+    print(organizations)
+    return organizations
