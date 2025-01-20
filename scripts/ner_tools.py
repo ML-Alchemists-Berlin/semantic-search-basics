@@ -2,28 +2,20 @@ import spacy
 from transformers import pipeline
 
 def load_ner_tools(language="de"):
-    """
-    Load different NER tools/models for the specified language.
-    
-    Args:
-        language (str): Language code for the models (e.g., 'de' for German, 'en' for English).
-    
-    Returns:
-        dict: A dictionary of NER tools with their names as keys.
-    """
-    if language == "de":
-        tools = {
-            "spaCy": spacy.load("de_core_news_sm"),
-            "Hugging Face (BERT)": pipeline("ner", model="dbmdz/bert-large-cased-finetuned-conll03-german"),
-        }
-    elif language == "en":
-        tools = {
-            "spaCy": spacy.load("en_core_web_sm"),
-            "Hugging Face (BERT)": pipeline("ner", model="dbmdz/bert-large-cased-finetuned-conll03-english"),
-        }
-    else:
-        raise ValueError(f"Unsupported language: {language}")
-    
+    tools = {}
+    try:
+        if language == "de":
+            tools = {
+                "spaCy": spacy.load("de_core_news_sm"),
+                "Hugging Face (BERT)": pipeline("ner", model="deepset/gbert-large"),
+            }
+        elif language == "en":
+            tools = {
+                "spaCy": spacy.load("en_core_web_sm"),
+                "Hugging Face (BERT)": pipeline("ner", model="dbmdz/bert-large-cased-finetuned-conll03-english"),
+            }
+    except Exception as e:
+        print(f"Error loading NER tools: {e}")
     return tools
 
 def apply_ner_tools(text, tools):
