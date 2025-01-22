@@ -53,7 +53,7 @@ def extract_and_display_organizations(comparison):
     print("=" * 90)
     for word, tool_results in comparison.items():
         # Check if the token is labeled as 'ORG' by any model
-        if "ORG" or "I-ORG" in tool_results.values():
+        if "ORG" in tool_results.values():
             spacy_label = tool_results.get("spaCy", "N/A")
             bert_label = tool_results.get("Hugging Face (BERT)", "N/A")
             print(f"{word:<30}{spacy_label:<30}{bert_label:<30}")
