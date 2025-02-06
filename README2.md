@@ -9,9 +9,9 @@ Este proyecto tiene como objetivo crear un dataset colaborativo para fine-tuning
 3. Clean and preprocessing the data with `preprocess_data.py`.
 4. Label the entities and contribute to the dataset within the folder: `data/processed/`.
 
-## Instalación
+## Setup
 
-1. Clona el repositorio.
-2. Instala las dependencias:
+1. Clone Repo.
+2. Install dependencies:
    ```bash
    pip install -r requirements.txt
