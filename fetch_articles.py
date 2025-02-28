@@ -26,7 +26,7 @@ def fetch_articles(url, save_dir):
     # Find all articles on the webpage (adjust selector as needed)
     articles = soup.find_all("article")
     if not articles:
-        print("No articles found on the webpage.")
+        print("No articles found on the website.")
         return
 
     # Create the directory if it doesn't exist
