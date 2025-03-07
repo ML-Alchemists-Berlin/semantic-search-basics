@@ -8,10 +8,3 @@ Este proyecto tiene como objetivo crear un dataset colaborativo para fine-tuning
 2. Download news articles using `fetch_articles.py`.
 3. Clean and preprocessing the data with `preprocess_data.py`.
 4. Label the entities and contribute to the dataset within the folder: `data/processed/`.
-
-## Setup
-
-1. Clone Repo.
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
